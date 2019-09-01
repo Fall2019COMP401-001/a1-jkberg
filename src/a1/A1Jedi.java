@@ -33,6 +33,7 @@ public class A1Jedi {
 				String item_name = scan.next();
 				for (int k = 0; k < number_of_items; k++) {
 					if (item_name.equals(store_items[k])) {
+						number_of_each_item[k] += item_quantity;
 						customers_item_quantity[k]++;
 					}
 				}
@@ -49,7 +50,7 @@ public class A1Jedi {
 			if (number_of_customers_per_item[m] == 0) {
 				System.out.println("No customers bought " + store_items[m]);
 			} else {
-				System.out.println(number_of_customers_per_item[m] + " customers bought " + store_items[m]);
+				System.out.println(number_of_customers_per_item[m] + " customers bought " + number_of_each_item[m] + " " + store_items[m]);
 			}
 		}
 	}
